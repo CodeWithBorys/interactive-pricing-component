@@ -21,12 +21,23 @@
     </header>
     <main>
       <div class="pricing">
-        <p id="pageviews"><span>100K</span> Pageviews</p>
-        <p id="price"><span>$16.00</span> / month</p>
-        <input type="range" name="price" id="price__range" min="0" max="100" />
+        <p id="pageviews">100K Pageviews</p>
+        <p id="price">$20.00 / month</p>
+        <input
+          type="range"
+          name="price"
+          id="price__range"
+          value="20"
+          min="0"
+          max="75"
+          step="5"
+        />
         <div class="billing">
           <p>Monthly Billing</p>
-          <input type="checkbox" name="toggle-billing" id="toggle" />
+          <input type="checkbox" id="toggle" />
+          <label for="toggle">
+            <div class="switch"></div>
+          </label>
           <p>Yearly Billing <span class="discount">25% discount</span></p>
         </div>
       </div>
@@ -49,5 +60,7 @@
         >CodeWithBorys</a
       >.
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
