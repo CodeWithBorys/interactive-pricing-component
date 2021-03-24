@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  background: url('/images/bg-pattern.svg') no-repeat;
+  background-position: top center;
+  overflow: hidden;
+  color: hsl(225, 20%, 60%);
+}
+
+header {
+  background: url('/images/pattern-circles.svg') no-repeat;
+  background-position: center;
+  padding: 50px 0;
+}
+
+h1 {
+  color: hsl(227, 35%, 25%);
+}
+
+.intro {
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+main {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 490px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pricing {
+  display: grid;
+  grid-template-areas:
+    'pageviews price'
+    'slider slider'
+    'billing billing';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  padding: 40px;
+}
+
+#pageviews {
+  grid-area: pageviews;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#price {
+  grid-area: price;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#price span {
+  font-weight: 800;
+  font-size: 2rem;
+  color: hsl(227, 35%, 25%);
+  padding-right: 5px;
+}
+
+#price__range {
+  grid-area: slider;
+  appearance: none;
+  height: 10px;
+  width: 100%;
+  outline: none;
+  background: hsl(224, 65%, 95%);
+  border-radius: 10px;
+  margin: 20px 0 50px;
+}
+
+/* Styling the Thumb */
+/* webkit */
+#price__range::-webkit-slider-thumb {
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  background: url('/images/icon-slider.svg'),
+    linear-gradient(hsl(174, 86%, 45%), hsl(174, 86%, 45%));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px cover;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 10px 30px -5px hsl(174, 86%, 45%);
+}
+/* firefox */
+#price__range::-moz-range-thumb {
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  background: url('/images/icon-slider.svg'),
+    linear-gradient(hsl(174, 86%, 45%), hsl(174, 86%, 45%));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px cover;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 10px 30px -5px hsl(174, 86%, 45%);
+}
+
+/* IE */
+#price__range::-ms-thumb {
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  background: url('/images/icon-slider.svg'),
+    linear-gradient(hsl(174, 86%, 45%), hsl(174, 86%, 45%));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px cover;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 10px 30px -5px hsl(174, 86%, 45%);
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle + label {
+  width: 50px;
+  height: 25px;
+  background: hsl(223, 50%, 87%);
+  border-radius: 20px;
+  margin: 0 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+#toggle + label:hover {
+  background: hsl(174, 77%, 80%);
+}
+
+#toggle + label .switch {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background: #fff;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  transition: 0.5s;
+}
+
+#toggle:checked + label .switch {
+  transform: translateX(25px);
+}
+
+.billing {
+  grid-area: billing;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.discount {
+  position: absolute;
+  background: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+  font-size: 10px;
+  padding: 3px 7px;
+  border-radius: 10px;
+  font-weight: 600;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.cta {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eaeefb;
+}
+
+.benefits {
+  list-style: none;
+  text-align: left;
+}
+
+.benefits li {
+  padding-left: 20px;
+  background: url('/images/icon-check.svg') no-repeat;
+  background-position: center left;
+  line-height: 2rem;
+  font-size: 14px;
+}
+
+.cta button {
+  border: 0;
+  background: hsl(227, 35%, 25%);
+  color: hsl(226, 100%, 87%);
+  padding: 15px 50px;
+  border-radius: 40px;
+  outline: none;
+  cursor: pointer;
+}
+
+.cta button:hover {
+  color: #fff;
+}
+
+.cta button:active {
+  transform: scale(0.98);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+}
