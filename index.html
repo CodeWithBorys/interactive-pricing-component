@@ -11,18 +11,22 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="style.css" />
+
     <title>Frontend Mentor | Interactive pricing component</title>
   </head>
   <body>
     <header>
       <h1>Simple, traffic-based pricing</h1>
-      <p>Sign-up for our 30-day trial.</p>
-      <p>No credit card required.</p>
+      <div class="intro">
+        <p>Sign-up for our 30-day trial.</p>
+        <p>No credit card required.</p>
+      </div>
     </header>
     <main>
       <div class="pricing">
         <p id="pageviews">100K Pageviews</p>
-        <p id="price">$20.00 / month</p>
+        <p id="price"><span>$20.00</span> / month</p>
         <input
           type="range"
           name="price"
